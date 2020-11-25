@@ -10,6 +10,8 @@ class MovieData(models.Model):
     platform = models.CharField(max_length=500)
     poster = models.ImageField(upload_to = 'images/')
 
+    def __str__(self):
+        return self.title
 
 class SeriesData(models.Model):
     title = models.CharField(max_length=500, default="")
@@ -17,3 +19,6 @@ class SeriesData(models.Model):
     desc = models.TextField(max_length=500, default="")
     platform = models.CharField(max_length=500)
     poster = models.ImageField(upload_to = 'images/')
+
+    def __str__(self):
+        return self.title

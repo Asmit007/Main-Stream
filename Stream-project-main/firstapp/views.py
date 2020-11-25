@@ -8,7 +8,7 @@ def HomePage(request):
 
 def MoviePage(request):
     obj = MovieData.objects.all()
-    print(obj)
+    # print(obj)
     return render(request,'Movies.html', {'obj':obj}) 
 
 def TvseriesPage(request):
