@@ -11,7 +11,7 @@ body{
 }*/
 .search input[type=text]{ 
         width:350px; 
-        height:50px; 
+        height:35px; 
         margin:2% 0%; 
         border-radius:5px; 
         border: none; 
@@ -34,13 +34,14 @@ body{
     }  
 .navbar {
   overflow: hidden;
+  height: 70px;
  background-image: linear-gradient(141deg, #a8b89f 0%, #24bf8c 51%, #70c986 75%);
 }
 .text{
   float:left;
   display: inline-block;
   margin-right: 45%;
-  font-weight: bold;
+  font-weight: 900;
   color:#e66314;
   font-family: algerian;
   font-size:130%;
@@ -48,44 +49,49 @@ body{
 }
 .navbar a {
   float: left;
-  font-size: 130%;
+  font-size: 120%;
   color: white;
   text-align: center;
   padding: 2% 2%;
   text-decoration: none;
-  line-height:auto;
+  line-height:12px;
   transition: all 0.5s linear;
+}
+
+.icon{
+  pointer-events: none;
 }
 .dropdown {
   float: left;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 
+
 .dropdown .dropbtn {
-  font-size: 130%;  
+  font-size: 120%;  
   border: none;
   outline: none;
   color: white;
   background-color: inherit;
   font-family: inherit;
   margin: 0;
-  /*line-height: 15px;*/
-  padding-top: 35px;
+  line-height: 15px;
+  padding-top: 26px;
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
   background-color: red;
 }
 
-.dropdown-content {
+.dropdown-content { 
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 160px;
+  /*min-width: 160px;*/
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-  margin-top: 0%;
-  padding:0px 50px; 
+  /*margin-top: 0%;*/
+  padding:0px 36px; 
 }
 
 .dropdown-content a {
@@ -99,6 +105,7 @@ body{
 
 .dropdown-content a:hover {
   background-color: #ddd;
+  /*padding: 0px 0px;*/
 }
 
 .dropdown:hover .dropdown-content {
@@ -109,4 +116,39 @@ body{
 }
 .dropdown:focus .dropdown-content {
   display: block;
+}
+
+.movieheading{
+  padding:2% 2%;
+  color:#ffe61c;
+  font-family:Comic Sans MS;
+}
+
+.box{
+  padding:0%;
+  padding-left: 2%;
+}
+
+.box-img{
+  transform: rotateY(0);
+  transition: all 0.5s ease-in-out 0s;
+}
+.box:hover .box-img{
+  transform: rotateY(-90deg);
+}
+.box-img img{
+  width:300px;
+  height: 350px;
+  border:3px solid #ffe61c;
+  border-radius: 10px;
+}
+
+.content{
+  top:0;
+  left: 0;
+  width:100%;
+  height: 100%;
+  position: relative;
+  color:white;
+  background:rgba(0,0,0,0.8);
 }
