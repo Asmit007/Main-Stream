@@ -1,20 +1,69 @@
-{% extends 'Homepage.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Movies</title>
+  <link rel="stylesheet" type="text/css" href="../static/css/movies.css">
+  <link rel="stylesheet" href= 
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="navbar">
+ <img src="../static/firstapp/Yess2.png" class="logo">
+ <a href="#"><i class="fa fa-film"></i> Movies</a>
+  <a href="#"><i class="fa fa-tv"></i> Tv series</a>
+    <a href="#"><i class="fa fa-bookmark"></i> Watchlist</a>
+  <!-- <div class="dropdown">
+        <button class="dropbtn"><i class="fa fa-user-plus"></i> Login/SignUp
+         <i class="fa fa-caret-down"></i>
+        </button>
+      <div class="dropdown-content">
+        <a href="login.html" target="_blank">Login</a>
+        <a href="#">SignUp</a>
+      </div> -->
+<!-- </div>  -->
+   <div class="search"> 
+            <form action="#"> 
+                <input type="text"
+                    placeholder=" Search..."
+                    name="search">
+            </form> 
+        </div> 
+    </div> 
 
-{% block Title%}
-<title>Movies</title>
-{% endblock %}
+<div class="button">
+  <a href="#" class="b1">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    Coming Soon
+  </a>
+  <a href="#" class="b1">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    In Theaters
+  </a>  
 
-{% block X %}
+  <a href="#" class="b1">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    Top Rated
+  </a>
 
-{% load static %}
+  <a href="#" class="b1">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    Most Viewed
+  </a>    
+</div>
 
-{% for x in obj %}
-<h1>{{x.title}}</h1>
-<h1>{{x.releasedON}}</h1>
-<h1>{{x.desc}}</h1>
-
-<img src="{{ x.poster.url }}">
-{% endfor %}
-
-
-{% endblock %}
+</body>
+</html>
