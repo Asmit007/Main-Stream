@@ -40,23 +40,32 @@
     </div> 
 
 <h1 class="movieheading">TRENDING MOVIES</h1>
+
+
 <div class="main">
+  {% for x in obj2 %}  
   <div class="box"> 
     <div class="box-img">
-      <img src="../static/firstapp/indoo.jpg">
+      <img src="{{x.poster.url}}">
     </div>
     <div class="content">
-      <h3>Indoo Ki Jawani</h3>
-      <p>Releasing on : DEC 11 
+      <h3>{{x.title}}</h3>
+      <p>Releasing on : {{x.releasedON}}
+        {% if x.platform == "Theatre" %}
         <br>In cinemas near you</p>
+
+        {% else %}
+        <br>Only on {{x.platform}}</p>
+        {% endif %}
     </div>
     <div class="button">
       <li><a href="#"><i class="fa fa-bookmark"></i> Watchlist</a>
-      <li><a href="https://www.youtube.com/watch?v=ZwTjZIsgQhg"  target="_blank" class="b1"><i class="fa fa-play"></i> Trailer</a></li>
+      <li><a href="{{x.trailer}}"  target="_blank" class="b1"><i class="fa fa-play"></i> Trailer</a></li>
       <li><a href="#" class="b1"><i class="fa fa-info-circle"></i> Details</a></li>
     </div>  
   </div>
-  <div class="box"> 
+  {% endfor %}
+  <!-- <div class="box"> 
     <div class="box-img">
       <img src="../static/firstapp/durgamati.png">
     </div>
@@ -67,7 +76,7 @@
     </div>
    <div class="button">
       <li><a href="#"><i class="fa fa-bookmark"></i> Watchlist</a>
-      <li><a href="https://www.youtube.com/watch?v=ZwTjZIsgQhg"  target="_blank" class="b1"><i class="fa fa-play"></i> Trailer</a></li>
+      <li><a href=""  target="_blank" class="b1"><i class="fa fa-play"></i> Trailer</a></li>
       <li><a href="#" class="b1"><i class="fa fa-info-circle"></i> Details</a></li>
     </div>  
   </div>
@@ -97,33 +106,39 @@
     </div>
    <div class="button">
       <li><a href="#"><i class="fa fa-bookmark"></i> Watchlist</a>
-      <li><a href="https://www.youtube.com/watch?v=ZwTjZIsgQhg"  target="_blank" class="b1"><i class="fa fa-play"></i> Trailer</a></li>
+      <li><a href=""  target="_blank" class="b1"><i class="fa fa-play"></i> Trailer</a></li>
       <li><a href="#" class="b1"><i class="fa fa-info-circle"></i> Details</a></li>
     </div> 
   </div>
-  </div>
+  </div> -->
 </div>
 
 
 <h1 class="tvheading">TRENDING TV</h1>
 
 <div class="main">
+
+  {% for x in obj %}
   <div class="box"> 
     <div class="box-img">
-      <img src="../static/firstapp/indoo.jpg">
+      <!-- <img src="../static/firstapp/indoo.jpg"> -->
+      <img src="{{x.poster.url}}">
     </div>
     <div class="content">
-      <h3>Indoo Ki Jawani</h3>
-      <p>Releasing on : DEC 11 
-        <br>In cinemas near you</p>
+      <h3>{{x.title}}</h3>
+      <p>Releasing on : {{x.releasedON}}
+        {% if x.platform %}
+        <br>Only on {{x.platform}}</p>
+        {% endif %}
     </div>
     <div class="button">
       <li><a href="#"><i class="fa fa-bookmark"></i> Watchlist</a>
-      <li><a href="https://www.youtube.com/watch?v=ZwTjZIsgQhg"  target="_blank" class="b1"><i class="fa fa-play"></i> Trailer</a></li>
+      <li><a href="{{x.trailer}}"  target="_blank" class="b1"><i class="fa fa-play"></i> Trailer</a></li>
       <li><a href="#" class="b1"><i class="fa fa-info-circle"></i> Details</a></li>
     </div>  
   </div>
-  <div class="box"> 
+  {% endfor %}
+  <!-- <div class="box"> 
     <div class="box-img">
       <img src="../static/firstapp/durgamati.png">
     </div>
@@ -168,7 +183,7 @@
       <li><a href="#" class="b1"><i class="fa fa-info-circle"></i> Details</a></li>
     </div> 
   </div>
-  </div>
+  </div> -->
 </div>
 
 

@@ -4,7 +4,9 @@ from .models import MovieData, SeriesData
 # Create your views here.
 
 def HomePage(request):
-    return render(request,'Homepage.html') 
+    obj = SeriesData.objects.all()
+    obj2 = MovieData.objects.all() 
+    return render(request,'Homepage.html',{'obj':obj , 'obj2':obj2 }) 
 
 def MoviePage(request):
     obj = MovieData.objects.all()
