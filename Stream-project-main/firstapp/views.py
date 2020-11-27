@@ -6,7 +6,7 @@ from .models import MovieData, SeriesData
 def HomePage(request):
     obj = SeriesData.objects.all()
     obj2 = MovieData.objects.all() 
-    return render(request,'Homepage.html',{'obj':obj , 'obj2':obj2 }) 
+    return render(request,'Homepage.html',{'obj':obj , 'obj2':obj2}) 
 
 def MoviePage(request):
     # obj = MovieData.objects.all()
