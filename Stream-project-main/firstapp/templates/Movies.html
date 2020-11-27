@@ -1,12 +1,3 @@
-{% extends 'Homepage.html' %}
-
-<!-- {% block Title%}
-<title>Sign Up</title>
-{% endblock %} -->
-
-{% block X %}
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,18 +11,10 @@
 <body>
 <div class="navbar">
  <img src="../static/firstapp/Yess2.png" class="logo">
- <a href="#"><i class="fa fa-film"></i> Movies</a>
+ <a href="{% url 'Movies' %}"><i class="fa fa-film"></i> Movies</a>
   <a href="#"><i class="fa fa-tv"></i> Tv series</a>
     <a href="#"><i class="fa fa-bookmark"></i> Watchlist</a>
-  <!-- <div class="dropdown">
-        <button class="dropbtn"><i class="fa fa-user-plus"></i> Login/SignUp
-         <i class="fa fa-caret-down"></i>
-        </button>
-      <div class="dropdown-content">
-        <a href="login.html" target="_blank">Login</a>
-        <a href="#">SignUp</a>
-      </div> -->
-<!-- </div>  -->
+ 
    <div class="search"> 
             <form action="#"> 
                 <input type="text"
@@ -103,4 +86,3 @@
 
 </body>
 </html>
-{% endblock %}
