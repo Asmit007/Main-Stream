@@ -14,7 +14,7 @@
 <div class="navbar">
  <!-- <a href="#" class="logo" id="logo">WhatsLi>e</a> -->
  <img src="../static/firstapp/Yess2.png" class="logo">
- <a href="Movies.html"><i class="fa fa-film"></i> Movies</a>
+ <a href="{%url 'Movies'  %}"><i class="fa fa-film"></i> Movies</a>
   <a href="#"><i class="fa fa-tv"></i> Tv series</a>
     <a href="#"><i class="fa fa-bookmark"></i> Watchlist</a>
   <!-- <div class="dropdown">
@@ -38,7 +38,7 @@
             </form> 
         </div> 
     </div> 
-
+{% block X %}
 <h1 class="movieheading">TRENDING MOVIES</h1>
 
 
@@ -212,3 +212,4 @@
 
 </body>
 </html>
+{% endblock %}
