@@ -11,8 +11,9 @@
 <body>
 <div class="navbar">
  <img src="../static/firstapp/Yess2.png" class="logo">
+ <a href="{% url 'Home' %}"><i class="fa fa-home"></i> Home</a>
  <a href="{% url 'Movies' %}"><i class="fa fa-film"></i> Movies</a>
-  <a href="#"><i class="fa fa-tv"></i> Tv series</a>
+  <a href="{% url 'TV'  %}"><i class="fa fa-tv"></i> Tv series</a>
     <a href="#"><i class="fa fa-bookmark"></i> Watchlist</a>
  
    <div class="search"> 
@@ -25,14 +26,14 @@
     </div> 
 
 <div class="button">
-  <a href="#" class="b1">
+  <a href="{% url 'MCS' %}" class="b1">
     <span></span>
     <span></span>
     <span></span>
     <span></span>
     Coming Soon
   </a>
-  <a href="#" class="b1">
+  <a href="{% url 'MIT' %}" class="b1">
     <span></span>
     <span></span>
     <span></span>
@@ -40,7 +41,7 @@
     In Theaters
   </a>  
 
-  <a href="#" class="b1">
+  <a href="{% url 'MTR' %}" class="b1">
     <span></span>
     <span></span>
     <span></span>
@@ -48,7 +49,7 @@
     Top Rated
   </a>
 
-  <a href="#" class="b1">
+  <a href="{% url 'MMV' %}" class="b1">
     <span></span>
     <span></span>
     <span></span>
