@@ -1,0 +1,68 @@
+body{
+    margin:0 0;
+    background-color:#18181a;
+  }
+  
+  .movieheading{
+    margin-top: 5%;
+    padding:2% 2%;
+    color:#ffe61c;
+    font-family:Comic Sans MS;
+  }
+  .tvheading{
+    padding:2% 2%;
+    color:#ffe61c;
+    font-family:Comic Sans MS;
+  } 
+  
+  
+  footer{
+    margin-top:3%;
+    background-image: linear-gradient(141deg, #a8b89f 0%, #24bf8c 51%, #70c986 75%);
+    height: 150px;
+    /*background-color: #70c986;*/
+  }
+  .social{
+    font-size: 170%;
+    padding-top: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  footer a{
+    height:40px;
+    width: 50px;
+    text-align: center;
+    margin:10px;
+    
+  }
+  footer a i{
+    font-size: 200%;
+    transition: all 0.3s linear;
+  }
+  footer a:hover i{
+    font-size: 200%;
+  }
+  footer a:active{
+    color:red;
+  }
+  #foot{
+    text-align: center;
+    text-decoration: none;
+    padding-left:45%;
+    color:blue;
+    font-family:"Lucida Console", Courier, monospace;
+    font-size: 100%;
+  }
+  #foot1{
+     text-align: center;
+    text-decoration: none;
+    padding-left:45%;
+    color:blue;
+    font-family:  "Lucida Console", Courier, monospace;
+    font-size: 100%;
+  }
+  .foot2{
+    text-align: center;
+  }

@@ -24,7 +24,8 @@ def MoviePage(request):
     return render(request,'Movies.html') 
 
 def TvseriesPage(request):
-    return render(request,'Tvseries.html')
+    obj = SeriesData.objects.all()
+    return render(request,'Tvseries.html',{'obj':obj})
 
 def Login(request):
     return render(request,'Login.html')
