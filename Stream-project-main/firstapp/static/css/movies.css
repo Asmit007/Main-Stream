@@ -76,16 +76,7 @@ height: 40%;
   background-size: cover;
   border-radius: 11px;
 }
-#blackwidow{
-  box-shadow: 0px 0px 150px -45px rgba(255, 51, 0, 0.5);
-}
-#blacwidow:hover{
-    box-shadow: 0px 0px 120px -55px rgba(255, 51, 0, 0.5);
-  }
-.bright_back{
-  background: url("https://m.media-amazon.com/images/M/MV5BMjU2OGEwYTQtNTJiZC00NjU2LWE5OTItMzUzMzZmZDM2OTNjXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg");
-  background-size: 100% 100%;
-}
+
 
 
 .movie_social{
@@ -317,12 +308,17 @@ body{
   transition-delay: 0.75s;
 }
 
-
-.trailerbutton{
-  display: inline-block;
+#blackwidow{
+  box-shadow: 0px 0px 150px -45px rgba(255, 51, 0, 0.5);
 }
-
-.trailerbutton li{
-  margin-top:-10%;
-  width:30%;
+#blacwidow:hover{
+    box-shadow: 0px 0px 120px -55px rgba(255, 51, 0, 0.5);
+}
+#link1 {
+  text-decoration: none;
+  margin-left: 50px;
+}
+#link2{
+  text-decoration: none;
+  margin-left: 100px;
 }

@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import MovieData, SeriesData
+from math import ceil
 # Create your views here.
 
 def MovComingSoon(request):
@@ -18,10 +19,13 @@ def MovTopRated(request):
 def HomePage(request):
     obj = SeriesData.objects.all()
     obj2 = MovieData.objects.all() 
-    return render(request,'Homepage.html',{'obj':obj , 'obj2':obj2}) 
+    n = len(obj2) 
+    nSlides = n//4 + ceil((n/4)-(n//4)) 
+    return render(request,'Homepage.html',{'obj':obj , 'obj2':obj2 , 'nSlide':nSlides , 'range':range(1,nSlides) }) 
 
 def MoviePage(request):
-    return render(request,'Movies.html') 
+    obj = MovieData.objects.all() 
+    return render(request,'Movies.html',{'obj':obj}) 
 
 def TvseriesPage(request):
     obj = SeriesData.objects.all()

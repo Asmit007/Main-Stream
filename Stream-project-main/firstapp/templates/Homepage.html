@@ -92,39 +92,74 @@
 <h1 class="movieheading">TRENDING MOVIES</h1>
 
 
+<div id="demo" class="carousel slide" data-ride="carousel">
+ 
+  <ol class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0"></li>
+    {% for i in range %}
+    <li data-target="#demo" data-slide-to="{{i}}" class="active"></li>
+     {% endfor %}
+  </ol>
+
+
+
 <div class="carousel-inner">
+
   <div class="carousel-item active">
-  
-       
-        <div class="main">
-          {% for x in obj2|slice:"0:" %}
-          <div class="box"> 
-            <div class="box-img">
-                <img src="{{x.poster.url}}">
-            </div>
-            <div class="content">
-                <h3>{{x.title}}</h3>
-                <p>Releasing on : {{x.releasedON}}
-                {% if x.platform == "Theatre" %}
-                <br>In cinemas near you</p>
-        
-                {% else %}
-                <br>Only on {{x.platform}}</p>
-                {% endif %}
-            </div>
-            <div class="button">
-                <li><a href="#"><i class="fa fa-bookmark"></i> Watchlist</a>
-                <li><a href="{{x.trailer}}"  target="_blank" class="b1"><i class="fa fa-play"></i> Trailer</a></li>
-                <li><a href="#" class="b1"><i class="fa fa-info-circle"></i> Details</a></li>
-            </div>   
+
+  <div class="main">
+    <div class="box"> 
+      <div class="box-img">
+          <img src="{{obj2.0.poster.url}}">
+      </div>
+      <div class="content">
+          <h3>{{obj2.0.title}}</h3>
+          <p>Releasing on : {{obj2.0.releasedON}}
+          {% if obj2.0.platform == "Theater" %}
+          <br>In cinemas near you</p>
+
+          {% else %}
+          <br>Only on {{obj2.0.platform}}</p>
+          {% endif %}
+      </div>
+      <div class="button">
+          <li><a href="#"><i class="fa fa-bookmark"></i> Watchlist</a>
+          <li><a href="{{obj2.0.trailer}}"  target="_blank" class="b1"><i class="fa fa-play"></i> Trailer</a></li>
+          <li><a href="#" class="b1"><i class="fa fa-info-circle"></i> Details</a></li>
+      </div>   
+    </div>
+
+        {% for x in obj2|slice:"1:" %}
+        <div class="box"> 
+          <div class="box-img">
+              <img src="{{x.poster.url}}">
           </div>
-
-        {% if forloop.counter|divisibleby:4 and forloop.counter > 0 and not forloop.last %}
-        </div><div class="carousel-item">
-        {% endif %}
-
-        {% endfor %}   
+          <div class="content">
+              <h3>{{x.title}}</h3>
+              <p>Releasing on : {{x.releasedON}}
+              {% if x.platform == "Theatre" %}
+              <br>In cinemas near you</p>
+      
+              {% else %}
+              <br>Only on {{x.platform}}</p>
+              {% endif %}
+          </div>
+          <div class="button">
+              <li><a href="#"><i class="fa fa-bookmark"></i> Watchlist</a>
+              <li><a href="{{x.trailer}}"  target="_blank" class="b1"><i class="fa fa-play"></i> Trailer</a></li>
+              <li><a href="#" class="b1"><i class="fa fa-info-circle"></i> Details</a></li>
+          </div>   
         </div>
+        {% if forloop.counter|divisibleby:3 and forloop.counter > 0 and not forloop.last %}
+      </div>
+      <div class="carousel-item ">
+      {% endif %}
+
+      {% endfor %} 
+      </div> 
+       </div> 
+    </div>
+     
         
 
 
@@ -138,32 +173,23 @@
 
 
 
-        <a class="carousel-control-prev " href="#demo{{forloop.counter}}" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true" style="
-            margin-right: 120px;
-            width: 150px;
-            height: 50px;
-            border-bottom-width: 100px;"></span>
-           <span class="sr-only">Previous</span>
-         </a>
-         <a class="carousel-control-next" href="#demo{{forloop.counter}}" role="button" data-slide="next">
-           <span class="carousel-control-next-icon" aria-hidden="true" style="
-           margin-left: 70px;
-           width: 150px;
-           height: 50px;
-           border-bottom-width: 100px;"></span>
-           <span class="sr-only">Next</span>
-         </a>
-
-
-
-
-
-
-  </div>
-</div>
-
-
+  <a class="carousel-control-prev " href="#demo" role="button" data-slide="prev">
+  <span class="carousel-control-prev-icon" aria-hidden="true" style="
+    margin-right: 120px;
+    width: 150px;
+    height: 50px;
+    border-bottom-width: 100px;"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#demo" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true" style="
+    margin-left: 70px;
+    width: 150px;
+    height: 50px;
+    border-bottom-width: 100px;"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div> 
 
 
 
