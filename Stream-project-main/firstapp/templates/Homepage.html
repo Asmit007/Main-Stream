@@ -103,12 +103,12 @@
 
 
 
-<div class="carousel-inner">
+  <div class="carousel-inner">
 
   <div class="carousel-item active">
 
   <div class="main">
-    <div class="box"> 
+    <!-- <div class="box"> 
       <div class="box-img">
           <img src="{{obj2.0.poster.url}}">
       </div>
@@ -127,9 +127,9 @@
           <li><a href="{{obj2.0.trailer}}"  target="_blank" class="b1"><i class="fa fa-play"></i> Trailer</a></li>
           <li><a href="#" class="b1"><i class="fa fa-info-circle"></i> Details</a></li>
       </div>   
-    </div>
+    </div> -->
 
-        {% for x in obj2|slice:"1:" %}
+        {% for x in obj2|slice:"::-1" %}
         <div class="box"> 
           <div class="box-img">
               <img src="{{x.poster.url}}">
@@ -150,14 +150,16 @@
               <li><a href="#" class="b1"><i class="fa fa-info-circle"></i> Details</a></li>
           </div>   
         </div>
-        {% if forloop.counter|divisibleby:3 and forloop.counter > 0 and not forloop.last %}
-      </div>
-      <div class="carousel-item ">
+        {% if forloop.counter|divisibleby:4 and forloop.counter > 0 and not forloop.last %}
+      </div> <!-- main ka div-->
+    </div> <!--- Active ka div-->
+      <div class="carousel-item "> 
+        <div class="main">
       {% endif %}
 
       {% endfor %} 
+          </div>
       </div> 
-       </div> 
     </div>
      
         
