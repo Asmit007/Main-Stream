@@ -19,9 +19,7 @@ def MovTopRated(request):
 def HomePage(request):
     obj = SeriesData.objects.all()
     obj2 = MovieData.objects.all() 
-    n = len(obj2) 
-    nSlides = n//4 + ceil((n/4)-(n//4)) 
-    return render(request,'Homepage.html',{'obj':obj , 'obj2':obj2 , 'nSlide':nSlides , 'range':range(1,nSlides) }) 
+    return render(request,'Homepage.html',{'obj':obj , 'obj2':obj2}) 
 
 def MoviePage(request):
     obj = MovieData.objects.all() 

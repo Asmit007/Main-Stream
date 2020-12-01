@@ -3,3 +3,78 @@
 {% block title %}
 <title>Tv Series</title>
 {% endblock %}
+
+<link rel="stylesheet" type="text/css" href="../static/css/series.css"> 
+
+
+<div class="topbutton">
+  <div class="button">
+  <a href="{% url 'MCS' %}" class="b1">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    Coming Soon
+  </a>
+  <a href="{% url 'MIT' %}" class="b1">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    In Theaters
+  </a>  
+
+  <a href="{% url 'MTR' %}" class="b1">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    Top Rated
+  </a>
+
+  <a href="{% url 'MMV' %}" class="b1">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    Most Viewed
+  </a>    
+</div>
+  
+</div>
+
+<hr>
+
+{% for x in obj|slice:"::-1"%}
+<div class="sabsebadi">
+  <div class="movie_card" id="blackwidow">
+  <div class="info_section">
+    <div class="movie_header">
+      {% if x.poster2 %}
+      <img class="locandina" src="{{x.poster2.url}}">
+
+      {% else %}
+      <img class="locandina" src="https://pbs.twimg.com/media/ETXiQwUXsAIyjGM.jpg">
+
+      {% endif %}
+      <h1>{{x.title}}</h1>
+      <h4>{{x.releasedON}} | {{x.cast}}</h4>
+      <span class="minutes">{{x.runtime}}</span>
+      <p class="type">{{x.genre}}</p>
+    </div>
+    <div class="movie_desc">
+      <p class="text">
+       {{x.desc}}
+      </p>
+    </div>
+    <div > 
+        <a href="#" id="link1" ><i class="fa fa-bookmark"></i>&nbsp Add To Watchlist</a> 
+        <a href="{{x.trailer}}" id="link2"><i class="fa fa-play"></i>&nbsp Watch Trailer</a>
+    </div>
+  </div>
+    <div class="blur_back bright_back" id="rightposter">
+      <img src="{{x.poster.url}}" style="width: 320px; height: 350px">
+    </div>
+</div>
+</div>
+{% endfor %}
