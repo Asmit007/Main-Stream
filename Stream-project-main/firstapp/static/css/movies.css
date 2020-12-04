@@ -157,8 +157,8 @@ body{
   margin: 0;
   background:#3c3a3a;
   font-family: 'Montserrat', helvetica, arial, sans-serif;
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 15px;
+  font-weight: 700;
 }
 
 .topbutton{
@@ -181,7 +181,7 @@ body{
 }  
 .navbar a {
   float: left;
-  font-size: 120%;
+  font-size: 125%;
   color: white;
   text-align: center;
   padding: 2% 2%;
@@ -222,7 +222,7 @@ body{
 .logo{
   float: left;
   height: 100%;
-  width: 12%;
+  width: 8%;
 }
 
 .button{
@@ -317,6 +317,7 @@ body{
 #link1 {
   text-decoration: none;
   margin-left: 50px;
+  margin-bottom: 5%;
 }
 #link2{
   text-decoration: none;
