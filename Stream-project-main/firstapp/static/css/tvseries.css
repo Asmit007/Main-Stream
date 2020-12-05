@@ -164,11 +164,12 @@ body{
 .topbutton{
   position: fixed;
   width:100%;
+  
   z-index:2;
   overflow: hidden;
   background:#3c3a3a;
 }
-.navbar {
+/* .navbar {
   position: fixed;
   top: 0; 
   width:100%;
@@ -176,10 +177,10 @@ body{
   overflow: hidden;
   height: 75px;
   background-image: linear-gradient(141deg, #70c986 15%, #24bf8c 51%,#92cc7e 75%); 
-  /*background-color: #70c986;*/
+ 
   margin-bottom: 3%;
 }  
-.navbar a {
+ .navbar a {
   float: left;
   font-size: 120%;
   color: white;
@@ -194,12 +195,12 @@ body{
 }
 .navbar a:focus {
   background-color: red;
-}
+} */
 .sabsebadi{
   margin-top: 14%;
 }
 
-.search{ 
+/* .search{ 
     margin:10px 40px;
 } 
 .search input[type=text]{ 
@@ -224,7 +225,7 @@ body{
   float: left;
   height: 100%;
   width: 9%;
-}
+} */
 
 .button{
   margin-top:6%;
@@ -235,7 +236,7 @@ body{
   align-items: center; 
   min-height: 8vh;
   font-size: 130%;  
-  /*z-index:2;*/
+  /* z-index:2; */
 }
 
 .b1{

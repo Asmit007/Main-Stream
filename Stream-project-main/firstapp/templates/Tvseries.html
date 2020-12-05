@@ -1,9 +1,11 @@
-{% include 'Navbar.html' %}
+{% extends 'Navbar.html' %}
 
 {% block title %}
 <title>Tv Series</title>
 {% endblock %}
 
+
+{% block content %}
 <link rel="stylesheet" type="text/css" href="../static/css/tvseries.css"> 
 
 
@@ -78,3 +80,5 @@
 </div>
 </div>
 {% endfor %}
+
+{% endblock %}

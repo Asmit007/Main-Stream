@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 </head>
 <body>
+
 <div class="navbar">
  <img src="../static/firstapp/Yess2.png" class="logo">
  <a href="{% url 'Home' %}"><i class="fa fa-home"></i> Home</a>
@@ -16,14 +17,20 @@
   <a href="{% url 'TV'  %}"><i class="fa fa-tv"></i> Tv series</a>
     <a href="#"><i class="fa fa-bookmark"></i> Watchlist</a>
  
-   <div class="search"> 
-            <form action="#"> 
-                <input type="text"
-                    placeholder=" Search..."
-                    name="search">
-            </form> 
-        </div> 
-    </div> 
+<div class="search"> 
+        <form action="#"> 
+            <input type="text"
+                placeholder=" Search..."
+                name="search">
+        </form> 
+</div>
+
+<a href="#" style="float:right;" ><i class="fa fa-user-circle"></i> Login / Sign Up</a> 
+
+
+</div>
+
+
 <div class="topbutton">
   <div class="button">
   <a href="{% url 'MCS' %}" class="b1">

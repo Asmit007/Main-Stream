@@ -5,7 +5,7 @@ urlpatterns = [
 path('', views.HomePage,name="Home") ,
 path('movies/', views.MoviePage, name="Movies" ) ,
 path('tvseries/',views.TvseriesPage,name="TV") ,
-path('login/',views.Login,name='Login'),
+path('login/',views.Login,name='LP'),
 path('register/',views.SignUP,name='Sup'),
 
 path('movcomingsoon/',views.MovComingSoon,name='MCS'), 
