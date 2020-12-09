@@ -3,6 +3,8 @@ from django.http import HttpResponse
 from .models import MovieData, SeriesData
 from math import ceil
 # Create your views here.
+#This is a comment
+
 
 def MovComingSoon(request):
     return render(request,'MovComingSoon.html')
