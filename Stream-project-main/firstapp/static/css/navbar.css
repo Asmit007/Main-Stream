@@ -16,6 +16,7 @@
     text-align: center;
     padding: 2% 2%;
     text-decoration: none;
+    margin-top: -0.3% ;
     transition: all 0.5s linear;
   }
   .navbar a:hover, .dropdown:hover .dropbtn {
